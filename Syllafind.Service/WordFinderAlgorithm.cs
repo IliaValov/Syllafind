@@ -10,7 +10,7 @@ namespace Syllafind.Service
     {
         public List<string> FindWords(WordFilter filter)
         {
-            string jsonWords = File.ReadAllText("D:\\Programs\\Syllafind\\Syllafind.Service\\words_dictionary.json");
+            string jsonWords = File.ReadAllText(@"D:\Programs\Syllafind\Syllafind.API\Syllafind.Service\words_dictionary.json");
 
             HashSet<string> words = JsonConvert.DeserializeObject<Dictionary<string, int>>(jsonWords)
                 .Select(x => x.Key)
